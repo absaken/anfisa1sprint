@@ -43,15 +43,3 @@
     </div>
   </nav>
 </header>
-
-<!-- Создаём синоним для выражения request.resolver_match.view_name -->
-{% with request.resolver_match.view_name as view_name %}
-...
-<li class="nav-item">
-  <a class="nav-link {% if view_name  == 'homepage:index' %}active{% endif %}"
-     href="{% url 'homepage:index' %}">
-     Главная
-  </a>
-</li>
-...
-{% endwith %}
